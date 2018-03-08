@@ -202,7 +202,8 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px),
+screen and (max-height: 500px) {
     body {
         font-size: 7px;
         background-color: #e23565;
