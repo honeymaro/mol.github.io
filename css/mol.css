@@ -228,7 +228,13 @@ screen and (max-height: 500px) {
     .logo img {
         max-width: 240px;
         padding: 30px 0;
-    }
+	}
+	.content{
+		width: 100%;
+	}
+	.content .content-inside{
+		max-width: 100%;		
+	}
     .content .content-title,
     .content .content-input {
         margin-bottom: 20px;
