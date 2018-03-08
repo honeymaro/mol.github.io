@@ -52,12 +52,13 @@
     }
     .logo {
         width: 45.83%;
-        padding: 7.5%;
+        padding: 5%;
         text-align: right;
     }
     .logo img, .logo #logo {
         width: 100%;
-        max-width: 463px;
+		max-width: 463px;
+		display: inline-block;
     }
     .content {
         width: 54.17%;
