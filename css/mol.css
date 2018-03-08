@@ -64,7 +64,11 @@
         padding-left: 5%;
         background-color: #e23565;
         color: #fff;
-    }
+		transition: all 1s ease-in-out;
+	}
+	.content.animation{
+		
+	}
     .content .content-inside {
         width: 100%;
         max-width: 750px;
