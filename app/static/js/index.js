@@ -19,10 +19,21 @@ for (i = 0; i < domAnimationList.length; i++) {
 	fnAnimation(el, i * 250);
 }
 
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 $("form").submit(function(e){
     e.preventDefault();
     var formData = new FormData();
-    formData.append('email', $('#email').val() );
+    var email = $('#email').val();
+    if (!validateEmail(email)){
+        alert("Please input valid email address :)");
+        return;
+    }
+
+    formData.append('email', email );
     $.ajax({
           url: "/api/v1/subscribe/addList"
         , data: formData
