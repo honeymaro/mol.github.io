@@ -74,3 +74,7 @@ def forbidden(error):
 @app.route('/')
 def hello_world():
     return redirect('/static/index.html')
+
+@app.route('/robot.txt')
+def robot():
+    return redirect('/static/robot.txt')
