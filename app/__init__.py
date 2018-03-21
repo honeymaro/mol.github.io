@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, g, redirect, abort, make_response, jsonify, request
+from flask import Flask, g, redirect, abort, make_response, jsonify, request, send_file
 from flask_session import Session
 import pymysql
 
@@ -77,4 +77,4 @@ def hello_world():
 
 @app.route('/robot.txt')
 def robot():
-    return redirect('/static/robot.txt')
+    return send_file('static/robot.txt')
