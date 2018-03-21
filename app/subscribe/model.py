@@ -5,7 +5,7 @@ def addList(email):
     cursor = g.db.cursor()
 
     query = """
-        INSERT INTO project_ml.mailing_list (email) VALUES (%s)
+        INSERT INTO project_ml.mailing_list (email, input_time) VALUES (%s, CURRENT_TIMESTAMP)
     """
     try:
         cursor.execute(query, (email, ))
