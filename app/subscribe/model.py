@@ -25,7 +25,7 @@ def addList(email):
     msg['From'] = 'contact@langchain.io'
     msg['Subject'] = "Thank you for subscribing LangChain! (former, Mother of Language)"
     msg['To'] = email
-    with open('templates/letter.txt', 'r') as f:
+    with open('app/subscribe/templates/letter.txt', 'r') as f:
         text = f.read()
     content = MIMEText(text, 'plain', _charset='utf-8')
     msg.attach(content)
