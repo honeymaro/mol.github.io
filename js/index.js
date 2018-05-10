@@ -3,7 +3,7 @@ var animation = bodymovin.loadAnimation({
 	renderer: 'svg',
 	loop: false,
 	autoplay: true,
-	path: 'data.json'
+	path: 'logo.json'
 });
 
 var domAnimationList = document.getElementsByClassName("animation");
