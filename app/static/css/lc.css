@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
+@media screen {
+    * {
+        margin: 0px;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    img {
+        border: none;
+    }
+    textarea {
+        resize: none;
+    }
+    html {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+    body * {
+        overflow: hidden;
+    }
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .header {
+        width: 45.83%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: 10;
+    }
+    .header #logo {
+        width: 60%;
+        height: auto;
+        max-width: 400px;
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        padding-left: 45.83%;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #060385;
+        color: #fcfcfc;
+        -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+        -moz-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+        -o-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+    }
+    .content .content-padding {
+        width: 100%;
+        height: 30%;
+    }
+    .content .content-inside {
+        width: 100%;
+        height: auto;
+        max-width: 750px;
+        padding: 0px 50px 10px 50px;
+    }
+    .content .content-clickable {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .content h1 {
+        font-size: 3em;
+        max-width: 480px;
+        margin-bottom: 1.5em;
+        font-weight: 400;
+        overflow: visible;
+    }
+    .content h2 {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+        /* text-align: center; */
+        font-size: 2em;
+        font-weight: 100;
+        margin-bottom: 1.5em;
+    }
+    .content a {
+        color: #fcfcfc;
+    }
+    .content .content-input {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: #fcfcfc;
+        margin-bottom: 1em;
+    }
+    .content .content-input input {
+        width: 100%;
+        height: auto;
+        padding: 10px 50px 10px 10px;
+        background-color: transparent;
+        border: none;
+        font-size: 1.2em;
+    }
+    .content .content-input button {
+        width: 40px;
+        height: 100%;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url(../img/keyboard-right-arrow-button.png);
+        background-size: 50% auto;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .content .content-video {
+        width: 100%;
+        height: 0%;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+    .content .content-video iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .content-icons {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: block;
+    }
+    .content-icons a {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        padding: 10px 20px;
+        background-color: #fcfcfc;
+        color: #060385;
+        margin-bottom: 4px;
+    }
+    .content-icons a>img {
+        width: auto;
+        height: 24px;
+        margin: 0 4px 0 0;
+        vertical-align: middle;
+    }
+    .content.animation {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    .content>.content-inside>* {
+        -webkit-transition: transform .4s ease-in-out .1s, opacity .4s ease-in-out .1s;
+        -moz-transition: transform .4s ease-in-out .1s, opacity .4s ease-in-out .1s;
+        -o-transition: transform .4s ease-in-out .1s, opacity .4s ease-in-out .1s;
+        transition: transform .4s ease-in-out .1s, opacity .4s ease-in-out .1s;
+    }
+    .content>.content-inside>*.animation {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .header {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    .header #logo {
+        width: 50%;
+        height: auto;
+        max-width: 400px;
+        display: block;
+        position: relative;
+        right: unset;
+        top: unset;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .content {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 0;
+    }
+    .content .content-padding {
+        display: none;
+    }
+    .content .content-inside {
+        width: 100%;
+        height: auto;
+        padding: 24px 5px;
+        max-width: unset;
+        text-align: center;
+    }
+    .content h1 {
+        font-size: 2em;
+        max-width: unset;
+    }
+    .content h2 {
+        font-size: 1.8em;
+    }
+}

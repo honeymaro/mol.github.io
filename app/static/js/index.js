@@ -3,35 +3,38 @@ var animation = bodymovin.loadAnimation({
 	renderer: 'svg',
 	loop: false,
 	autoplay: true,
-	path: 'data.json'
+	path: 'logo.json'
 });
 
-var domAnimationList = document.getElementsByClassName("animation");
-var i = 0;
-var fnAnimation = function (el, ms) {
-	setTimeout(function () {
-		el.classList.remove("animation");
-	}, ms);
-}
+var fnWindowResize = function () {
 
-for (i = 0; i < domAnimationList.length; i++) {
-	var el = domAnimationList.item(i);
-	fnAnimation(el, i * 250);
-}
+	var domPadding = document.getElementsByClassName("content-padding").item(0);
+	var domLogo = document.getElementById("logo");
 
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+	domPadding.style.height = (parseFloat(getComputedStyle(domLogo)["top"]) - (parseFloat(getComputedStyle(domLogo)["height"]) / 2.0)) + "px";
+
 }
+animation.addEventListener('DOMLoaded', function () {
+	fnWindowResize();
+	window.addEventListener('resize', fnWindowResize, true);
+	var domAnimationList = document.getElementsByClassName("animation");
+	var i = 0;
+	var fnAnimation = function (el, ms) {
+		setTimeout(function () {
+			el.classList.remove("animation");
+		}, ms);
+	}
+
+	for (i = 0; i < domAnimationList.length; i++) {
+		var el = domAnimationList.item(i);
+		fnAnimation(el, i * 250);
+	}
+});
 
 $("form").submit(function(e){
     e.preventDefault();
     var formData = new FormData();
     var email = $('#email').val();
-    if (!validateEmail(email)){
-        alert("Please input valid email address :)");
-        return;
-    }
 
     formData.append('email', email );
     $.ajax({
@@ -41,12 +44,19 @@ $("form").submit(function(e){
         , contentType: false
         , dataType: "HTML"
         , type: 'POST'
-        , success: function(data){
-            alert("Thank you for your supporting!");
-            $('#email').reset();
-          }
+        , success: function(data, textStatus, xhr){
+            if (xhr.status == 200){
+                alert("Thank you for your supporting!");
+                $('#email').reset();
+            } else if (xhr.status == 210){
+                alert("You've already input! Thank you again!");
+                $('#email').reset();
+            } else {
+                alert("There is an error on the site! Please contact to contact@ciceron.me");
+            }
+        }
         , error: function(xhr, ajaxOptions, thrownError){
             alert("There is an error on the site! Please contact to contact@ciceron.me");
-          }
+        }
     });
 });

@@ -65,7 +65,7 @@
     .content {
         width: 54.17%;
         padding-left: 5%;
-        background-color: #e23565;
+        background-color: #060385;
         color: #fff;
         -webkit-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
         -moz-transition: transform .5s ease-in-out, opacity .5s ease-in-out;
@@ -127,7 +127,7 @@
         /* font-size: 1.4em; */
     }
     .content .content-input .table {
-        border: 1px solid #f8d2dc;
+        border: 1px solid #c6c4fe;
         border-radius: 40px;
     }
     .content .content-input input[type=email] {
@@ -135,44 +135,44 @@
         height: auto;
         background-color: transparent;
         padding: 1em 2em;
-        color: #f8d2dc;
+        color: #c6c4fe;
         font-size: 1.4em;
         border: none;
     }
     .content .content-input input[type=email]::-webkit-input-placeholder {
-        color: #f8d2dc;
+        color: #c6c4fe;
     }
     .content .content-input input[type=email]::-moz-placeholder {
-        color: #f8d2dc;
+        color: #c6c4fe;
     }
     .content .content-input input[type=email]:-ms-input-placeholder {
-        color: #f8d2dc;
+        color: #c6c4fe;
     }
     .content .content-input input[type=email]:-moz-placeholder {
-        color: #f8d2dc;
+        color: #c6c4fe;
     }
     .content .content-input input[type=email]::placeholder {
-        color: #f8d2dc;
+        color: #c6c4fe;
     }
     .content .content-input button {
         width: auto;
         border: none;
-        border-left: 1px solid #f8d2dc;
+        border-left: 1px solid #c6c4fe;
         border-radius: 40px;
         background-color: transparent;
         padding: 1em 2em;
-        color: #f8d2dc;
+        color: #c6c4fe;
         white-space: nowrap;
         font-size: 1.4em;
         cursor: pointer;
     }
     .content .content-input button:hover {
-        background-color: #f8d2dc;
+        background-color: #c6c4fe;
         color: #000;
     }
     .content-footer {
         padding-top: 10px;
-        border-top: 1px solid #f8d2dc;
+        border-top: 1px solid #c6c4fe;
         font-size: 3em;
         position: absolute;
         bottom: 10%;
@@ -244,7 +244,7 @@
 screen and (max-height: 500px) {
     body {
         font-size: 7px;
-        background-color: #e23565;
+        background-color: #060385;
     }
     .wrapper {
         display: block;
@@ -280,7 +280,7 @@ screen and (max-height: 500px) {
     }
     .content-footer {
         padding-top: 10px;
-        border-top: 1px solid #f8d2dc;
+        border-top: 1px solid #c6c4fe;
         font-size: 3em;
         position: relative;
         /* bottom: 10%; */
