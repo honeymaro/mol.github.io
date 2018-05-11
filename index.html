@@ -6,48 +6,52 @@
 	<meta name="theme-color" content="#170807">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<title>MOL</title>
+	<title>LangChain</title>
 	<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" type="text/css" media="all" href="./css/mol.css">
+	<link rel="stylesheet" type="text/css" media="all" href="./css/lc.css">
 
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="row">
-			<div class="col logo">
-				<div>
-					<div id="logo"></div>
-					<!-- <img src="./img/5_1.png" alt="mol"> -->
+		<header class="header">
+			<div id="logo"></div>
+		</header>
+		<div class="content animation">
+			<div class="content-padding"></div>
+			<div class="content-inside">
+				<h1 class="content-clickable animation" onclick="document.getElementById('email').focus();">
+					Enter your email for Information Memorandum
+				</h1>
+				<form class="animation">
+					<div class="content-input">
+						<input type="email" id="email" placeholder="Your email address">
+						<button type="submit"></button>
+					</div>
+				</form>
+				<h3 class="animation">Do you have any questions?
+					<a href="mailto:contact@langchain.io">contact@langchain.io</a>
+				</h3>
+				<br>
+				<br>
+				<br>
+				<h2 class="animation">Introduce</h2>
+				<div class="content-video animation">
+					<iframe src="https://www.youtube.com/embed/3kJvpq8pcsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
-			</div>
-			<div class="col content animation">
-				<div class="content-inside">
-					<div class="content-title animation" onclick="document.getElementById('email').focus();">
-						<span>Enter your e-mail&nbsp;</span>
-						<span>for Information Memorandum</span>
-					</div>
-					<form class="content-input animation">
-						<div class="table">
-							<div class="row">
-								<div class="col" style="padding-right: 1em; width: 100%;">
-									<input id="email" type="email" placeholder="Your e-mail address">
-								</div>
-								<div class="col">
-									<button type="submit">Sign Up</button>
-								</div>
-							</div>
-						</div>
-						<p>
-							Do you have any questions?
-							<a href="mailto:contact@motheroflanguage.com">contact@motheroflanguage.com</a>
-						</p>
-					</form>
-					<div class="content-footer animation">
-						ICO starts on April 29th, 2018.
-					</div>
+				<br>
+				<br>
+				<h2 class="animation">Follow Us on</h2>
+				<div class="content-icons animation">
+					<a href="https://t.me/Langchain" target="_blank">
+						<img src="./img/telegram.png" alt="Telegram">Telegram(English)
+					</a>
+					<br>
+					<a href="https://t.me/langchain_kr" target="_blank">
+						<img src="./img/telegram.png" alt="Telegram">Telegram(한국어)
+					</a>
 				</div>
 			</div>
 		</div>
