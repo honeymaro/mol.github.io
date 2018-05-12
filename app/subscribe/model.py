@@ -33,7 +33,7 @@ def addList(email):
     msg = MIMEMultipart()
 
     msg['From'] = 'contact@langchain.io'
-    msg['Subject'] = "Thank you for subscribing LangChain! (former, Mother of Language)"
+    msg['Subject'] = "Thank you for subscribing LangChain!"
     msg['To'] = email
     with open('app/subscribe/templates/letter.txt', 'r') as f:
         text = f.read()

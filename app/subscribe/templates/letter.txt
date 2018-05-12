@@ -31,4 +31,4 @@ Please stay in touch! :)
 
 
 Many thanks,
-LangChain team (former Mother of Language)
+LangChain team
